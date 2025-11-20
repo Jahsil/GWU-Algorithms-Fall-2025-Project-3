@@ -1,4 +1,5 @@
 import random
+import time
 
 def generateLargeNumberOfBoxes(N, limit=1000):
     # code to generate n boxes with random dimensions up to limit
@@ -93,9 +94,19 @@ def calculateMaximumHeight(boxes):
 
 
 if __name__ == "__main__":
-    boxes = [(4, 6, 7), (1, 2, 3), (4, 5, 6), (10, 12, 32)]
+    # boxes = [(4, 6, 7), (1, 2, 3), (4, 5, 6), (10, 12, 32)]
+    # testing for these N values
+    n_values = [10,50,100,200,400,600,800,1000,1500,2000,3000,4000,5000]
 
+    # to see the output for different values of n just change the index of n_values[i]
+    boxes = generateLargeNumberOfBoxes(n_values[0])
+
+    start_time = time.time()
     height, stack = calculateMaximumHeight(boxes)
+    end_time = time.time()
+    print("Execution time is : ", end_time - start_time)
+
+    # height, stack = calculateMaximumHeight(boxes)
     print("Maximum stack height:", height)
     print("Boxes used (bottom to top):")
 
