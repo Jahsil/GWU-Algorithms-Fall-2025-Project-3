@@ -96,10 +96,10 @@ def calculateMaximumHeight(boxes):
 if __name__ == "__main__":
     # boxes = [(4, 6, 7), (1, 2, 3), (4, 5, 6), (10, 12, 32)]
     # testing for these N values
-    n_values = [10,50,100,200,400,600,800,1000,1500,2000,3000,4000,5000]
+    n_values = [10,50,100,200,400,600,800,1000,1500,2000,3000,4000,5000,6000, 7000, 8000, 9000, 10000, 12500, 15000, 17500, 20000]
 
     # to see the output for different values of n just change the index of n_values[i]
-    boxes = generateLargeNumberOfBoxes(n_values[0])
+    boxes = generateLargeNumberOfBoxes(n_values[21])
 
     start_time = time.time()
     height, stack = calculateMaximumHeight(boxes)
