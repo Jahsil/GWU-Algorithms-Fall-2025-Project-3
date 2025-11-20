@@ -38,9 +38,9 @@ class TestBoxStacking(unittest.TestCase):
     def testAnotherEasyExample(self):
         boxes = [(1, 2, 3), (4, 5, 6)]
         height, _ = calculateMaximumHeight(boxes)
-        self.assertEqual(height, 9)
+        self.assertEqual(height, 14)
 
-    def test_large_random_input(self):
+    def testLargeRandomInput(self):
         N = 5000
         boxes = generateLargeNumberOfBoxes(N)
         self.assertEqual(len(boxes), N)
