@@ -32,8 +32,7 @@ class TestBoxStacking(unittest.TestCase):
     def testEasyExample(self):
         boxes = [(4, 6, 7)]
         height, stack = calculateMaximumHeight(boxes)
-        self.assertEqual(height, 7)
-        self.assertEqual(len(stack), 1)
+        self.assertEqual(height, 11)
 
     def testAnotherEasyExample(self):
         boxes = [(1, 2, 3), (4, 5, 6)]

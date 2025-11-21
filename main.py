@@ -41,10 +41,10 @@ def calculateMaximumHeight(boxes):
         return 0, []
 
     # handle edge case of single box 
-    if len(boxes) == 1:
-        rotations = generateRotations(*boxes[0])
-        tallest_rotation = max(rotations, key=lambda x: x[2])
-        return tallest_rotation[2], [tallest_rotation]
+    # if len(boxes) == 1:
+    #     rotations = generateRotations(boxes[0])
+    #     tallest_rotation = max(rotations, key=lambda x: x[2])
+    #     return tallest_rotation[2], [tallest_rotation]
 
     # generate all possible rotations for each box which is 3n
     all_possible_rotations = []
@@ -94,12 +94,12 @@ def calculateMaximumHeight(boxes):
 
 
 if __name__ == "__main__":
-    # boxes = [(4, 6, 7), (1, 2, 3), (4, 5, 6), (10, 12, 32)]
+    # boxes = [(1, 2, 3)]
     # testing for these N values
     n_values = [10,50,100,200,400,600,800,1000,1500,2000,3000,4000,5000,6000, 7000, 8000, 9000, 10000, 12500, 15000, 17500, 20000]
 
     # to see the output for different values of n just change the index of n_values[i]
-    boxes = generateLargeNumberOfBoxes(n_values[21])
+    boxes = generateLargeNumberOfBoxes(n_values[0])
 
     start_time = time.time()
     height, stack = calculateMaximumHeight(boxes)
